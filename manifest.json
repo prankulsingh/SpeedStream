@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "SpeedStream",
+  "version": "1.0",
+  "description": "Change the speed or playback rate of HTML5 videos on current tab.",
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "speed_up": {
+      "suggested_key": {
+        "default": "Alt+M"
+      },
+      "description": "Speed up the video by 0.25x"
+    },
+    "slow_down": {
+      "suggested_key": {
+        "default": "Alt+N"
+      },
+      "description": "Slow down the video by 0.25x"
+    }
+  }
+}
