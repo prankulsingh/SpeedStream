@@ -12,6 +12,15 @@ SpeedStream is a Chromium extension that empowers users to control the playback 
 
 ## Installation
 
+1. Download the SpeedStream extension files.
+2. Open your Chromium-based browser (e.g., Google Chrome).
+3. Navigate to the Extensions settings by clicking on the three dots in the top-right corner, then selecting "More tools" > "Extensions."
+4. Enable Developer mode by toggling the switch in the top-right corner.
+5. Click on the "Load unpacked" button and select the folder containing the SpeedStream extension files.
+6. The SpeedStream extension should now be installed and ready to use.
+
+OR (if you don't use Google Chrome)
+
 1. Download the SpeedStream extension .crx file from the [Releases](https://github.com/prankulsingh/SpeedStream/releases) section of this GitHub repository.
 2. Open your Chromium-based browser (e.g., Google Chrome).
 3. Navigate to the Extensions settings by clicking on the three dots in the top-right corner, then selecting "More tools" > "Extensions."
