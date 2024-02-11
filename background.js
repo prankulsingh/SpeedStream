@@ -12,9 +12,9 @@ function displayPopup(message) {
         chrome.scripting.executeScript({
             target: { tabId: tab.id },
             func: (message) => {
-                const popup = document.createElement('div');
-                popup.style.cssText = `
-                    position: fixed;
+                const dialog = document.createElement('dialog');
+                dialog.style.cssText = `
+                    position: sticky;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
@@ -24,25 +24,28 @@ function displayPopup(message) {
                     border: 1px solid #ccc;
                     font-size: 40px;
                     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-                    z-index: 99999999 !important;
+                    border-radius: 10px;
+                    min-width: 160px;
+                    text-align: center;
                 `;
                 if(!document.querySelector("video")) {
-                    popup.textContent = "Video not found!"
+                    dialog.textContent = "Video not found!"
                 } else {
                     var playbackRate = document.querySelector("video").playbackRate;
                     if(message === "speed_up") {
                         playbackRate = playbackRate + 0.25;
-                        popup.textContent = "⏩ " + playbackRate;
+                        dialog.textContent = "⏩ " + playbackRate;
                     }
                     if(message === "slow_down") {
                         playbackRate = playbackRate - 0.25;
-                        popup.textContent = "⏪ " + playbackRate;
+                        dialog.textContent = "⏪ " + playbackRate;
                     }
                     document.querySelector("video").playbackRate = playbackRate;
                 }
-                document.body.appendChild(popup);
+                document.body.appendChild(dialog);
+                dialog.showModal();
                 setTimeout(() => {
-                    popup.remove();
+                    dialog.remove();
                 }, 1000);
             },
             args: [message] // Pass message as an argument
