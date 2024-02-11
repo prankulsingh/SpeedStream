@@ -46,8 +46,4 @@ While SpeedStream aims to work seamlessly with most videos on the web, there may
 
 For any feedback, suggestions, or support requests, please contact me or raise a PR.
 
-## Known Issues
-
-SpeedStream notification popup doesn't appear when your browser is using #top-layer to display the content (eg. full screen video). Currently, I don't know how to fix it. If you have a fix, please raise a PR.
-
 Happy video streaming with SpeedStream! 🎬🚀
